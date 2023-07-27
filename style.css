@@ -1,3 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+p,
+a,
+button {
+  font-family: "Karla", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "DM Serif Display", serif;
+}
+
+footer p {
+  font-weight: 700;
+}
+
+nav a {
+  font-weight: 400;
+}
+
+.section1 p,
+.section1 button {
+  font-weight: 400;
+}
+
+.section3 a {
+  font-weight: 400;
+}
+
 :root {
   --dark-violet: hsl(256, 26%, 20%);
   --grayish-blue: hsl(216, 30%, 68%);
@@ -6,9 +39,19 @@
   --very-light-gray: hsl(0, 0%, 98%);
 }
 
-nav a {
-  color: var(--dark-grayish-violet) !important;
+.text-dgv {
+  color: var(--dark-grayish-violet);
 }
+
+.mw-1024 {
+  width: 90%;
+  max-width: 1024;
+}
+
+nav a {
+  color: var(--dark-grayish-violet);
+}
+
 .section1 {
   background-color: var(--dark-violet);
   color: var(--very-light-gray);
@@ -16,10 +59,10 @@ nav a {
 
 .human {
   padding-top: 80px;
-  padding-bottom: 100px;
+  padding-bottom: 80px;
 }
 
-.section h1 {
+.section1 h1 {
   font-size: 40px;
 }
 
@@ -31,14 +74,60 @@ nav a {
   width: 100%;
 }
 
-@media (width > 768px) {
+@media (width> 768px) {
   .section1 img {
     position: absolute;
-    right: 10%;
     bottom: -20%;
     width: 40%;
+    right: 0%;
+    max-width: 360px;
   }
-  .section1 div {
+  .section1 div div {
     width: 50%;
+  }
+}
+
+/* ===================== */
+
+.section2 {
+  padding: 100px 0;
+}
+
+.section2 h2 {
+  font-size: 40px;
+}
+
+/* =========================== */
+
+.section3 div {
+  background-color: var(--dark-violet);
+  color: var(--very-light-gray);
+  width: 90%;
+  background-image: url("./images/bg-pattern-how-we-work-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+@media (width >768px) {
+  .section3 div {
+    background-image: url("./images/bg-pattern-how-we-work-desktop.svg");
+  }
+}
+
+.section3 h2 {
+  font-size: 35px;
+}
+
+footer {
+  background-image: url("./images/bg-pattern-footer-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: var(--very-light-gray);
+}
+
+@media (width > 768px) {
+  footer {
+    background-image: url("./images/bg-pattern-footer-desktop.svg");
+    background-image: 40%;
   }
 }
